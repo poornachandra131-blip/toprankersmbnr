@@ -275,3 +275,102 @@ footer p,footer a{color:#b9c7d8;font-size:.92rem}
 
 /* V7: course information is enquiry-led; no separate detail-page links */
 .course-enquiry-note{margin-top:14px;font-weight:700;color:#0c2f5c;font-size:.95rem;line-height:1.45}
+/* ===== MOBILE PHONE FIX ===== */
+@media (max-width: 700px) {
+  /* Prevent horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .demo-brand-row {
+    grid-template-columns: 65px 1fr;
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .demo-cap {
+    font-size: 3rem;
+  }
+
+  .demo-academy-title {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+    line-height: 0.95;
+  }
+
+  .demo-motto {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+  }
+
+  .demo-quote {
+    display: none;
+  }
+
+  /* Mobile navigation - allow wrapping instead of cutting off */
+  .demo-nav {
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .demo-nav a {
+    padding: 9px 12px;
+    font-size: 0.88rem;
+  }
+
+  .demo-nav .demo-enquire {
+    margin-left: 0;
+  }
+
+  /* Main hero becomes one column */
+  .demo-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .demo-hero {
+    padding: 20px 16px;
+  }
+
+  .demo-hero-copy h1 {
+    font-size: clamp(3rem, 15vw, 4.4rem);
+    line-height: 0.92;
+  }
+
+  .demo-hero-copy p {
+    font-size: 1rem;
+  }
+
+  /* Benefits */
+  .demo-benefits {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .demo-benefits span {
+    flex: 1 1 28%;
+    font-size: 0.9rem;
+  }
+
+  /* Teacher card */
+  .demo-teacher-card {
+    width: min(100%, 330px);
+    margin: 0 auto;
+  }
+
+  /* Maths graphic */
+  .demo-study-scene {
+    width: 100%;
+  }
+
+  /* Course cards */
+  .demo-course-grid {
+    grid-template-columns: 1fr;
+  }
+}
